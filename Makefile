@@ -1,5 +1,3 @@
-SRC_DIR = src
-INCLUDE_DIR = include
 FILES = ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
@@ -27,7 +25,7 @@ FILES = ft_isalpha.c \
 	ft_strjoin.c \
 	ft_islower.c \
 	ft_isupper.c
-OBJS =  $(FILES:%.c=$(SRC_DIR)/%.o)
+OBJS =  $(FILES:%.c=%.o)
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
 
@@ -36,11 +34,11 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar cr $(NAME) $(OBJS)
 
-%.o: $(SRC_DIR)/%.c
-	gcc $(FLAGS) -I $(INCLUDE_DIR) -o $@ -g
+%.o: %.c
+	gcc $(FLAGS) $< -c -o $@
 
 clean:
-	rm -f $(SRC_DIR)/*.o
+	rm -f *.o
 
 fclean: clean
 	rm -f $(NAME)

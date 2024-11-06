@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 16:58:58 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/06 12:35:22 by lroussel         ###   ########.fr       */
+/*   Created: 2024/11/06 10:48:40 by lroussel          #+#    #+#             */
+/*   Updated: 2024/11/06 11:26:44 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t		i;
-	const char	*str1;
-	const char	*str2;
+	char	*res;
+	int		i;
 
-	if (n == 0)
-		return (0);
+	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	i = 0;
-	str1 = (const char *)s1;
-	str2 = (const char *)s2;
-	while (str1[i] == str2[i] && i < n - 1)
+	if (!res)
+		return (0);
+	while (s[i])
+	{
+		res[i] = s[i];
 		i++;
-	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+	}
+	res[i] = '\0';
+	return (res);
 }

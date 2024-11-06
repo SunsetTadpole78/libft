@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 16:58:58 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/06 12:35:22 by lroussel         ###   ########.fr       */
+/*   Created: 2024/11/05 16:37:43 by lroussel          #+#    #+#             */
+/*   Updated: 2024/11/06 12:37:26 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t		i;
-	const char	*str1;
-	const char	*str2;
+	const char	*str;
 
-	if (n == 0)
-		return (0);
 	i = 0;
-	str1 = (const char *)s1;
-	str2 = (const char *)s2;
-	while (str1[i] == str2[i] && i < n - 1)
+	str = (const char *)s;
+	c = (unsigned char)c;
+	while (i < n)
+	{
+		if (str[i] == c)
+			return ((char *)str + i);
 		i++;
-	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+	}
+	return (0);
 }

@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 16:37:43 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/06 12:37:26 by lroussel         ###   ########.fr       */
+/*   Created: 2024/11/05 14:47:46 by lroussel          #+#    #+#             */
+/*   Updated: 2024/11/06 10:08:24 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t		i;
-	const char	*str;
+	size_t	ss;
+	size_t	sd;
+	size_t	i;
+	size_t	j;
 
-	i = 0;
-	str = (const char *)s;
-	c = (unsigned char)c;
-	while (i < n)
+	ss = ft_strlen(src);
+	if (size == 0)
+		return (ss);
+	sd = ft_strlen(dst);
+	if (size <= sd)
+		return (ss + size);
+	i = sd;
+	j = 0;
+	while (src[j] && j <= size - sd - 1)
 	{
-		if (str[i] == c)
-			return ((char *)str + i);
+		dst[i] = src[j];
 		i++;
+		j++;
 	}
-	return (0);
+	if ((sd + j) == size && sd < size)
+		dst[i - 1] = '\0';
+	else
+		dst[i] = '\0';
+	return (ss + sd);
 }
