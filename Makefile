@@ -24,6 +24,7 @@ FILES = ft_isalpha.c \
 	ft_substr.c  \
 	ft_strjoin.c \
 	ft_islower.c \
+	ft_putchar_fd.c     \
 	ft_isupper.c
 OBJS =  $(FILES:%.c=%.o)
 NAME = libft.a

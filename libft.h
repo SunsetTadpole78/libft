@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/06 12:08:48 by lroussel         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:33:13 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,5 @@ char	*ft_strjoin(char const *s1, char const *s2);
 int		ft_islower(int c);
 int		ft_isupper(int c);
 
+void	ft_putchar_fd(char c, int fd);
 #endif
