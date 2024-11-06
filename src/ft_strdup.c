@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:24:33 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/06 12:13:37 by lroussel         ###   ########.fr       */
+/*   Created: 2024/11/06 10:48:40 by lroussel          #+#    #+#             */
+/*   Updated: 2024/11/06 11:26:44 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "../include/libft.h"
 
-int	main(void)
+char	*ft_strdup(const char *s)
 {
-	char	str[] = "lorem ipsum ";
-	char	str2[] = "dolor sit amet";
-	printf("%s", ft_strjoin(str, str2));
-	return (0);
+	char	*res;
+	int		i;
+
+	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	i = 0;
+	if (!res)
+		return (0);
+	while (s[i])
+	{
+		res[i] = s[i];
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
 }
