@@ -16,8 +16,9 @@
 
 int	main(void)
 {
-	char	str[] = "lorem ipsum ";
-	char	str2[] = "dolor sit amet";
-	printf("%s", ft_strjoin(str, str2));
+	printf("%s:%s\n", ft_strjoin("", ""), "");
+	printf("%s:%s\n", ft_strjoin("abc", ""), "abc");
+	printf("%s:%s\n", ft_strjoin("", "abc"), "abc");
+	printf("%s:%s\n", ft_strjoin("abcd", "efghi"), "abcdefghi");
 	return (0);
 }
