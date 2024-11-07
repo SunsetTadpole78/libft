@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:24:33 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/06 12:13:37 by lroussel         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:41:55 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,15 @@
 
 int	main(void)
 {
-	printf("%s:%s\n", ft_strjoin("", ""), "");
-	printf("%s:%s\n", ft_strjoin("abc", ""), "abc");
-	printf("%s:%s\n", ft_strjoin("", "abc"), "abc");
-	printf("%s:%s\n", ft_strjoin("abcd", "efghi"), "abcdefghi");
+char	**result;
+	int		i;
+	
+		result = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse", ' ');
+			i = 0;
+				while (result[i])
+						{
+									printf(">%s<\n", result[i]);
+											i++;
+												}
 	return (0);
 }
