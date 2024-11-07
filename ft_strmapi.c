@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:48:24 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/07 17:18:15 by lroussel         ###   ########.fr       */
+/*   Created: 2024/11/07 16:56:20 by lroussel          #+#    #+#             */
+/*   Updated: 2024/11/07 17:31:42 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	size;
-	char			*res;
+	char	*res;
+	int		i;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	size = ft_count_digits(n);
-	if (n < 0)
-		size++;
-	res = malloc(sizeof(char) * (size + 1));
+	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!res)
 		return (0);
-	if (n < 0)
+	i = 0;
+	while (s[i])
 	{
-		res[0] = '-';
-		n *= -1;
+		res[i] = f(i, s[i]);
+		i++;
 	}
-	res[size--] = '\0';
-	while (n > 9)
-	{
-		res[size] = (n % 10) + '0';
-		n /= 10;
-		size--;
-	}
-	res[size] = n + '0';
+	res[i] = '\0';
 	return (res);
 }

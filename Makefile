@@ -29,6 +29,8 @@ FILES = ft_isalpha.c		\
 	ft_split.c		\
 	ft_itoa.c		\
 	ft_count_digits.c	\
+	ft_strmapi.c		\
+	ft_striteri.c		\
 	ft_putchar_fd.c		\
 	ft_islower.c		\
 	ft_isupper.c

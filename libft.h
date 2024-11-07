@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/07 16:16:00 by lroussel         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:37:34 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ char			*ft_get_first_word(char const *s, char const *charset);
 char			**ft_split(char const *s, char c);
 unsigned int	ft_count_digits(int n);
 char			*ft_itoa(int n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 int				ft_islower(int c);
 int				ft_isupper(int c);
 

@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_digits.c                                  :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:52:14 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/07 17:17:59 by lroussel         ###   ########.fr       */
+/*   Created: 2024/11/07 17:32:25 by lroussel          #+#    #+#             */
+/*   Updated: 2024/11/07 17:37:01 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_count_digits(int n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int	count;
+	unsigned int	i;
 
-	if (n == -2147483648)
-		return (10);
-	if (n == 0)
-		return (1);
-	if (n < 0)
-		n *= -1;
-	count = 0;
-	while (n / 10 != 0 || n % 10 != 0)
+	i = 0;
+	while (s[i])
 	{
-		n /= 10;
-		count++;
+		f(i, s + i);
+		i++;
 	}
-	return (count);
 }
