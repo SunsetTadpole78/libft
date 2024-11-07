@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_count_digits.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:24:33 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/07 16:46:19 by lroussel         ###   ########.fr       */
+/*   Created: 2024/11/07 15:52:14 by lroussel          #+#    #+#             */
+/*   Updated: 2024/11/07 16:15:40 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
+unsigned int	ft_count_digits(int n)
 {
-	printf("%s:%s\n", ft_itoa(-20), ft_itoa(-9));
-	return (0);
+	unsigned int	count;
+	
+	if (n == -2147483648)
+		return (10);
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		n *= -1;
+	count = 0;
+	while (n / 10 != 0 || n % 10 != 0)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
 }

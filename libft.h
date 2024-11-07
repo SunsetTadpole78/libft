@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/07 15:39:02 by lroussel         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:16:00 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,11 @@ void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
-unsigned int	ft_countwords(char const *s, char const *charset);
+unsigned int	ft_count_words(char const *s, char const *charset);
 char			*ft_get_first_word(char const *s, char const *charset);
 char			**ft_split(char const *s, char c);
+unsigned int	ft_count_digits(int n);
+char			*ft_itoa(int n);
 int				ft_islower(int c);
 int				ft_isupper(int c);
 

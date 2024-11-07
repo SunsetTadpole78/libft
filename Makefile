@@ -24,9 +24,11 @@ FILES = ft_isalpha.c		\
 	ft_substr.c 		\
 	ft_strjoin.c		\
 	ft_strtrim.c		\
-	ft_countwords.c		\
+	ft_count_words.c	\
 	ft_get_first_word.c	\
 	ft_split.c		\
+	ft_itoa.c		\
+	ft_count_digits.c	\
 	ft_putchar_fd.c		\
 	ft_islower.c		\
 	ft_isupper.c
