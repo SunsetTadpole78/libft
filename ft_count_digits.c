@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 unsigned int	ft_count_digits(int n)
 {
 	unsigned int	count;
 
-	if (n == -2147483648)
+	if (n == MIN_INT)
 		return (10);
 	if (n == 0)
 		return (1);

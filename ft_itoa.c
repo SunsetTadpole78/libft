@@ -17,14 +17,14 @@ char	*ft_itoa(int n)
 	unsigned int	size;
 	char			*res;
 
-	if (n == -2147483648)
+	if (n == MIN_INT)
 		return (ft_strdup("-2147483648"));
 	size = ft_count_digits(n);
 	if (n < 0)
 		size++;
 	res = malloc(sizeof(char) * (size + 1));
 	if (!res)
-		return (0);
+		return (NULL);
 	if (n < 0)
 	{
 		res[0] = '-';

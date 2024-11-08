@@ -33,7 +33,7 @@ static char	*split_next_word(char const *s, char c, char ***res, unsigned int p)
 	if (!word)
 	{
 		free_all(*res, p);
-		return (0);
+		return (NULL);
 	}
 	return (word);
 }
@@ -46,7 +46,7 @@ char	**ft_split(char const *s, char c)
 
 	res = malloc(sizeof(char *) * (ft_count_words(s, &c) + 1));
 	if (!res)
-		return (0);
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (i < ft_strlen(s))
@@ -57,7 +57,7 @@ char	**ft_split(char const *s, char c)
 		{
 			res[j] = split_next_word(s + i, c, &res, j);
 			if (!res[j])
-				return (0);
+				return (NULL);
 			i += ft_strlen(res[j]) + 1;
 			j++;
 		}

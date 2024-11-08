@@ -24,7 +24,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	if (n == 0)
 		return (t);
 	if (!t && !r)
-		return (0);
+		return (NULL);
 	while (i < n)
 	{
 		t[i] = r[i];
