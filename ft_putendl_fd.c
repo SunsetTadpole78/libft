@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:24:33 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/07 18:38:10 by lroussel         ###   ########.fr       */
+/*   Created: 2024/11/07 17:50:21 by lroussel          #+#    #+#             */
+/*   Updated: 2024/11/07 17:52:12 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int	main(void)
+void	ft_putendl_fd(char *s, int fd)
 {
-	return (0);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

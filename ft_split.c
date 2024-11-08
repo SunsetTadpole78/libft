@@ -6,11 +6,37 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 10:59:09 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/07 16:17:19 by lroussel         ###   ########.fr       */
+/*   Updated: 2024/11/07 18:37:38 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	free_all(char **splited, unsigned int max)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (i < max)
+	{
+		free(splited[i]);
+		i++;
+	}
+	free(splited);
+}
+
+static char	*split_next_word(char const *s, char c, char ***res, unsigned int p)
+{
+	char	*word;
+
+	word = ft_get_first_word(s, &c);
+	if (!word)
+	{
+		free_all(*res, p);
+		return (0);
+	}
+	return (word);
+}
 
 char	**ft_split(char const *s, char c)
 {
@@ -29,7 +55,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (i < ft_strlen(s))
 		{
-			res[j] = ft_get_first_word(s + i, &c);
+			res[j] = split_next_word(s + i, c, &res, j);
 			if (!res[j])
 				return (0);
 			i += ft_strlen(res[j]) + 1;
