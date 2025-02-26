@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/08 11:09:26 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/02/26 13:54:15 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,23 @@ int				ft_lstsize(t_list *lst);
 t_list			*ft_lstlast(t_list *lst);
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*));
 t_list			*ft_lstnew(void *content);
+
+//temp
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+typedef struct s_vector2
+{
+	int	x;
+	int	y;
+}	t_vector2;
+
+void			*ft_realloc(void *ptr, size_t old_size, size_t new_size);
+char			*ft_securejoin(char const *s1, char const *s2, char must_free);
+int				ft_securelen(char const *str);
+int				ft_isquote(int c);
+int				ft_iswhitespace(int c);
+char			*get_next_line(int fd);
 
 #endif

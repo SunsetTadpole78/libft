@@ -36,7 +36,8 @@ DEFAULT = ft_isalpha.c	\
 	ft_putendl_fd.c		\
 	ft_putnbr_fd.c		\
 	ft_islower.c		\
-	ft_isupper.c
+	ft_isupper.c		\
+	$(TEMP)
 BONUS = ft_lstnew_bonus.c	\
 	ft_lstadd_front_bonus.c	\
 	ft_lstsize_bonus.c		\
@@ -46,6 +47,13 @@ BONUS = ft_lstnew_bonus.c	\
 	ft_lstclear_bonus.c		\
 	ft_lstiter_bonus.c		\
 	ft_lstmap_bonus.c
+TEMP = ft_iswhitespace.c	\
+       ft_realloc.c		\
+       ft_securelen.c		\
+       ft_isquote.c		\
+       ft_securejoin.c		\
+       get_next_line.c
+
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)
 NAME = libft.a
