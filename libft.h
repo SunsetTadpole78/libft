@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/02/26 13:54:15 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/02/26 14:51:56 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,5 +104,6 @@ int				ft_securelen(char const *str);
 int				ft_isquote(int c);
 int				ft_iswhitespace(int c);
 char			*get_next_line(int fd);
+char			*ft_get_contents(int fd);
 
 #endif

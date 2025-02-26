@@ -52,7 +52,8 @@ TEMP = ft_iswhitespace.c	\
        ft_securelen.c		\
        ft_isquote.c		\
        ft_securejoin.c		\
-       get_next_line.c
+       get_next_line.c		\
+       ft_get_contents.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)
