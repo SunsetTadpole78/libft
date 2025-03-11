@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/02/26 17:12:42 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/11 14:35:28 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,8 @@ int				ft_isquote(int c);
 int				ft_iswhitespace(int c);
 char			*get_next_line(int fd);
 char			*ft_get_contents(int fd);
+int				ft_max(int v1, int v2);
+int				ft_min(int v1, int v2);
 int				ft_abs(int v);
 
 #endif
