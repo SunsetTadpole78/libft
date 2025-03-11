@@ -54,6 +54,8 @@ TEMP = ft_iswhitespace.c	\
        ft_securejoin.c		\
        get_next_line.c		\
        ft_get_contents.c	\
+       ft_max.c			\
+       ft_min.c			\
        ft_abs.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
