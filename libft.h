@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/11 14:35:28 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/14 16:49:15 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,7 @@ char			*ft_get_contents(int fd);
 int				ft_max(int v1, int v2);
 int				ft_min(int v1, int v2);
 int				ft_abs(int v);
+int				ft_bytes_count(char c);
+size_t			ft_strlen_utf8(char *str);
 
 #endif

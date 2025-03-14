@@ -56,7 +56,9 @@ TEMP = ft_iswhitespace.c	\
        ft_get_contents.c	\
        ft_max.c			\
        ft_min.c			\
-       ft_abs.c
+       ft_abs.c			\
+       ft_bytes_count.c		\
+       ft_strlen_utf8.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)
