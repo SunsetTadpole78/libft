@@ -6,12 +6,20 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:36:37 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/21 09:48:56 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/21 11:03:34 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * Return key of first difference between arrays.
+ *
+ * @param t_array	*array: Array's adress.
+ * @param void		*value: Value who will be added on the array.
+ *
+ * @return			int : Return key of first difference between arrays.
+ */
 int	ft_array_diff(t_array *array1, t_array *array2)
 {
 	int		i;

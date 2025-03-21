@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 13:22:55 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/20 16:25:20 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/21 10:55:05 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
  * @param t_array	*array: Array's adress.
  * @param int		(*callback)(void *value, int key): Callback function to call
  * to check each element.
+ *
+ * @return			int: Return true if callback returns true for all elements.
+ * Otherwise the function returns false.
  */
 int	ft_array_all(t_array *array, int (*callback)(void *value, int key))
 {
