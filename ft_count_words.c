@@ -6,31 +6,29 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 11:27:46 by lroussel          #+#    #+#             */
-/*   Updated: 2024/11/07 16:16:32 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/01/09 17:24:44 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_count_words(char const *s, char const *charset)
+unsigned int	ft_count_words(char const *s, char c)
 {
-	unsigned int	i;
 	unsigned int	count;
+	int				in_word;
 
-	if (!s || ft_strlen(s) == 0)
-		return (0);
-	i = 0;
 	count = 0;
-	while (s[i])
+	in_word = 0;
+	while (*s)
 	{
-		if (!ft_strchr(charset, s[i]))
+		if (*s != c && !in_word)
 		{
+			in_word = 1;
 			count++;
-			while (!ft_strchr(charset, s[i]))
-				i++;
 		}
-		else
-			i++;
+		else if (*s == c)
+			in_word = 0;
+		s++;
 	}
 	return (count);
 }

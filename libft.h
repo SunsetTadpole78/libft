@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/21 10:36:29 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/21 12:29:05 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 
 unsigned int	ft_count_digits(int n);
-unsigned int	ft_count_words(char const *s, char const *charset);
+unsigned int	ft_count_words(char const *s, char c);
 
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
