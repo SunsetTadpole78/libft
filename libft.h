@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/14 16:52:51 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/20 16:35:41 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,22 @@ typedef struct s_vector2
 	int	y;
 }	t_vector2;
 
+typedef enum e_array_type
+{
+	INT,
+	FLOAT,
+	STRING,
+	STRUCT
+}	t_array_type;
+
+typedef struct s_array
+{
+	t_array_type	type;
+	int				element_size;
+	int				size;
+	void			*content;
+}	t_array;
+
 void			*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 char			*ft_securejoin(char const *s1, char const *s2, char must_free);
 int				ft_securelen(char const *str);
@@ -110,5 +126,15 @@ int				ft_min(int v1, int v2);
 int				ft_abs(int v);
 int				ft_bytes_count(char c);
 size_t			ft_strlen_utf8(const char *s);
+
+t_array			*ft_array(t_array_type type, int element_size);
+void			ft_array_push(t_array *array, void *value);
+void			*ft_array_pop(t_array *array);
+int				ft_array_all(t_array *array,
+					int (*callback)(void *value, int key));
+int				ft_array_any(t_array *array,
+					int (*callback)(void *value, int key));
+int				ft_array_count_value(t_array *array, void *value);
+int				ft_count(t_array *array);
 
 #endif

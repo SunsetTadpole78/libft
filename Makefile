@@ -58,12 +58,19 @@ TEMP = ft_iswhitespace.c	\
        ft_min.c			\
        ft_abs.c			\
        ft_bytes_count.c		\
-       ft_strlen_utf8.c
+       ft_strlen_utf8.c		\
+       ft_array.c		\
+       ft_array_push.c		\
+       ft_array_pop.c		\
+       ft_array_all.c		\
+       ft_array_any.c		\
+       ft_array_count_value.c	\
+       ft_count.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)
 NAME = libft.a
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g
 
 all: $(NAME)
 
