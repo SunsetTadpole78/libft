@@ -66,7 +66,9 @@ TEMP = ft_iswhitespace.c	\
        ft_array_any.c		\
        ft_array_count_value.c	\
        ft_array_unshift.c	\
-       ft_count.c
+       ft_array_set_value.c	\
+       ft_count.c		\
+       ft_unset.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)
