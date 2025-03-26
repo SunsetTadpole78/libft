@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 10:29:01 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/21 11:00:05 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/26 10:43:04 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_array_unshift(t_array *array, void *value)
 {
 	int	i;
 
+	if (array->size == 0)
+		return (ft_array_push(array, value));
 	array->content = ft_realloc(
 			array->content,
 			array->element_size * array->size,
