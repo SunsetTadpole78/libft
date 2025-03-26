@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 10:29:01 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/26 10:43:04 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/26 12:46:05 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,29 +22,26 @@
  */
 int	ft_array_unshift(t_array *array, void *value)
 {
-	int	i;
+	void	**metadata;
+	int		size;
+	void	**new;
+	int		i;
 
-	if (array->size == 0)
-		return (ft_array_push(array, value));
-	array->content = ft_realloc(
-			array->content,
-			array->element_size * array->size,
-			array->element_size * (array->size + 1)
-			);
-	if (!array->content)
-		return (array->size);
-	i = array->size;
-	while (i-- > 0)
-		ft_memcpy(
-			(char *)array->content + ((i + 1) * array->element_size),
-			(char *)array->content + (i * array->element_size),
-			array->element_size
-			);
-	ft_memcpy(
-		(char *)array->content,
-		value,
-		array->element_size
-		);
-	array->size++;
-	return (array->size);
+	metadata = *array - 1;
+	size = *(int *)metadata[0];
+	new = malloc(sizeof(void *) * (size + 2));
+	if (!new)
+		return (-1);
+	new[0] = ((int *)metadata[0]);
+	i = 1;
+	while (i <= size)
+	{
+		new[i + 1] = metadata[i];
+		i++;
+	}
+	free(metadata);
+	new[1] = value;
+	(*((int *)new[0]))++;
+	*array = new + 1;
+	return (*((int *)new[0]));
 }

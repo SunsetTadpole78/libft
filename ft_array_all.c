@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 13:22:55 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/21 10:55:05 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/26 14:04:11 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,16 @@
  * @return			int: Return true if callback returns true for all elements.
  * Otherwise the function returns false.
  */
-int	ft_array_all(t_array *array, int (*callback)(void *value, int key))
+int	ft_array_all(t_array *array, int (*callback)(int key, void *value))
 {
-	int	i;
+	void	**metadata;
+	int		i;
 
+	metadata = *array - 1;
 	i = 0;
-	while (i < array->size)
+	while (i < *((int *)metadata[0]))
 	{
-		if (!callback((char *)array->content + (i * array->element_size), i))
+		if (!callback(i, metadata[i + 1]))
 			return (0);
 		i++;
 	}

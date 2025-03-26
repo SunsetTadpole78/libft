@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:28:35 by lroussel         #+#       #+#           */
-/*   Updated: 2025/03/21 10:50:10 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/26 14:05:01 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,20 @@
  */
 int	ft_array_push(t_array *array, void *value)
 {
-	array->content = ft_realloc(
-			array->content,
-			array->element_size * array->size,
-			array->element_size * (array->size + 1)
+	void	**metadata;
+	int		size;
+
+	metadata = *array - 1;
+	size = *(int *)metadata[0];
+	metadata = ft_realloc(
+			metadata,
+			sizeof(void *) * (size + 1),
+			sizeof(void *) * (size + 2)
 			);
-	if (!array->content)
-		return (array->size);
-	ft_memcpy(
-		(char *)array->content + (array->size * array->element_size),
-		value,
-		array->element_size
-		);
-	array->size++;
-	return (array->size);
+	if (!metadata)
+		return (-1);
+	metadata[size + 1] = value;
+	(*((int *)metadata[0]))++;
+	*array = metadata + 1;
+	return (*((int *)metadata[0]));
 }

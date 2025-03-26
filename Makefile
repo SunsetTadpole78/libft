@@ -63,13 +63,13 @@ TEMP = ft_iswhitespace.c	\
        ft_array.c		\
        ft_array_push.c		\
        ft_array_pop.c		\
-       ft_array_all.c		\
-       ft_array_any.c		\
-       ft_array_count_value.c	\
        ft_array_unshift.c	\
        ft_array_set_value.c	\
-       ft_count.c		\
-       ft_unset.c
+       ft_array_count_value.c	\
+       ft_array_all.c		\
+       ft_array_any.c		\
+       ft_array_count.c		\
+       ft_array_unset.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)

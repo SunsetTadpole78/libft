@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:21:05 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/24 13:59:08 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/26 14:05:29 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@
  * @param t_array	*array: Array's adress.
  * @param int		key: Index of the value that will be replaced.
  * @param void		*value: Value who will replace other on the array.
- * @param void		(*del)(int key, void *value): function called when the
- * value is destroyed.
+ *
+ * @return void		*: Value who was replaced.
  */
-void	ft_array_set_value(t_array *array, int key, void *value,
-	void (*del)(int, void *))
+void	*ft_array_set_value(t_array *array, int key, void *value)
 {
-	if (key < 0 || key >= array->size)
-		return ;
-	del(key, (char *)array->content + (key * array->element_size));
-	ft_memcpy(
-		(char *)array->content + (key * array->element_size),
-		value,
-		array->element_size
-		);
+	void	**metadata;
+	void	*replaced;
+
+	metadata = *array - 1;
+	if (key < 0 || key >= *(int *)metadata[0])
+		return (NULL);
+	replaced = metadata[key + 1];
+	metadata[key + 1] = value;
+	return (replaced);
 }
