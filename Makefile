@@ -60,6 +60,7 @@ TEMP = ft_iswhitespace.c	\
        ft_bytes_count.c		\
        ft_strlen_utf8.c		\
        ft_isonlywhitespaces.c	\
+       ft_pathjoin.c		\
        ft_array.c		\
        ft_array_push.c		\
        ft_array_pop.c		\
