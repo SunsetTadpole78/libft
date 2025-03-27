@@ -71,7 +71,8 @@ TEMP = ft_iswhitespace.c	\
        ft_array_any.c		\
        ft_array_swap.c		\
        ft_array_count.c		\
-       ft_array_unset.c
+       ft_array_unset.c		\
+       ft_scandir.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)

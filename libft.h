@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/27 02:09:37 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/27 04:20:52 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,13 @@ t_list			*ft_lstnew(void *content);
 #  define BUFFER_SIZE 42
 # endif
 
+typedef enum e_sorting_order
+{
+	SCANDIR_SORT_ASCENDING,
+	SCANDIR_SORT_DESCENDING,
+	SCANDIR_SORT_NONE
+}	t_sorting_order;
+
 typedef struct s_vector2
 {
 	int	x;
@@ -128,5 +135,8 @@ int				ft_array_any(t_array *array,
 void			ft_array_swap(t_array *array, int key1, int key2);
 int				ft_array_count(t_array array);
 void			ft_array_unset(t_array *array, void (*del)(int, void *));
+
+t_array			ft_scandir(char *path, t_sorting_order sorting_order,
+					int hidden_files, int dir_path);
 
 #endif
