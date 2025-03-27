@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/27 07:21:00 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/27 07:24:10 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,7 +135,7 @@ int				ft_array_any(t_array *array,
 void			ft_array_swap(t_array *array, int key1, int key2);
 int				ft_array_count(t_array array);
 void			ft_array_unset(t_array *array, void (*del)(int, void *));
-void			ft_arrray_free_entry(int key, void *value);
+void			ft_array_free_entry(int key, void *value);
 
 t_array			ft_scandir(char *path, t_sorting_order sorting_order,
 					int hidden_files, int dir_path);
