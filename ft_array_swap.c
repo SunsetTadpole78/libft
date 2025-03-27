@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_array_count_value.c                             :+:      :+:    :+:   */
+/*   ft_array_swap.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/20 14:18:39 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/27 02:12:09 by lroussel         ###   ########.fr       */
+/*   Created: 2025/03/27 02:06:30 by lroussel          #+#    #+#             */
+/*   Updated: 2025/03/27 02:20:32 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /*
- * Counts the occurrences of a distinct value in an array.
+ * Swap two values on an array.
  *
  * @param t_array	*array: Array's adress.
- * @param void		*value: Value that is counted..
- *
- * @return			int: Return the number of times the value is in the array.
+ * @param int		key1: Key of first value.
+ * @param int		key1: Key of second value.
  */
-int	ft_array_count_value(t_array *array, void *value)
+void	ft_array_swap(t_array *array, int key1, int key2)
 {
 	void	**metadata;
-	int		i;
-	int		count;
+	void	*tmp;
 
+	if (key1 < 0 || key2 < 0)
+		return ;
 	metadata = *array - 1;
-	i = 1;
-	count = 0;
-	while (i <= *((int *)metadata[0]))
-	{
-		if (metadata[i] == value)
-			count++;
-		i++;
-	}
-	return (count);
+	if (key1 >= *(int *)metadata[0] || key2 >= *(int *)metadata[0])
+		return ;
+	tmp = metadata[key1 + 1];
+	metadata[key1 + 1] = metadata[key2 + 1];
+	metadata[key2 + 1] = tmp;
 }

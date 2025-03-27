@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/26 16:36:56 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/03/27 02:09:37 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,6 +125,7 @@ int				ft_array_all(t_array *array,
 					int (*callback)(int key, void *value));
 int				ft_array_any(t_array *array,
 					int (*callback)(int key, void *value));
+void			ft_array_swap(t_array *array, int key1, int key2);
 int				ft_array_count(t_array array);
 void			ft_array_unset(t_array *array, void (*del)(int, void *));
 

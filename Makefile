@@ -69,6 +69,7 @@ TEMP = ft_iswhitespace.c	\
        ft_array_count_value.c	\
        ft_array_all.c		\
        ft_array_any.c		\
+       ft_array_swap.c		\
        ft_array_count.c		\
        ft_array_unset.c
 
