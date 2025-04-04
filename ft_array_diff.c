@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:36:37 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/21 11:03:34 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/04 11:32:32 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 /*
  * Return key of first difference between arrays.
  *
- * @param t_array	*array: Array's adress.
- * @param void		*value: Value who will be added on the array.
+ * @param t_array	*array1: First array's adress.
+ * @param t_array	*array2: Second array's adress.
  *
  * @return			int : Return key of first difference between arrays.
  */
