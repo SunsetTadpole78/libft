@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/04 21:52:45 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/04 21:56:02 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,6 +123,8 @@ int				ft_bytes_count(char c);
 size_t			ft_strlen_utf8(const char *s);
 int				ft_isonlywhitespaces(const char *s);
 char			*ft_pathjoin(char const *s1, char const *s2);
+char			*ft_strreplace_part(char *src, int start, int replace_len,
+					char *to_add);
 
 t_array			ft_array(void);
 int				ft_array_push(t_array *array, void *value);
