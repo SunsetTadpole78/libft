@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/04 10:01:31 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/04 11:05:31 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,6 @@ void			ft_array_free_entry(int key, void *value);
 
 t_array			ft_scandir(char *path, t_sorting_order sorting_order,
 					int hidden_files, int dir_path);
+int				ft_isdir(char *path);
 
 #endif
