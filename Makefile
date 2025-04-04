@@ -75,6 +75,7 @@ TEMP = ft_iswhitespace.c	\
        ft_array_count.c		\
        ft_array_unset.c		\
        ft_array_free_entry.c	\
+       ft_array_nothing_entry.c	\
        ft_array_dup.c		\
        ft_array_merge.c		\
        ft_scandir.c		\

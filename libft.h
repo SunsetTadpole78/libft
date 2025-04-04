@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/04 11:29:31 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/04 21:52:45 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,7 @@ void			ft_array_swap(t_array *array, int key1, int key2);
 int				ft_array_count(t_array array);
 void			ft_array_unset(t_array *array, void (*del)(int, void *));
 void			ft_array_free_entry(int key, void *value);
+void			ft_array_nothing_entry(int key, void *value);
 int				ft_array_diff(t_array *array1, t_array *array2);
 t_array			ft_array_dup(t_array array);
 t_array			ft_array_merge(t_array array1, t_array array2);
