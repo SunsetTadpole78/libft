@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/04 21:56:02 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/05 17:12:24 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 char			**ft_split(char const *s, char c);
 char			**ft_split_charset(char const *s, char *charset);
+char			**ft_split_raw(char const *s, char c);
 
 /* ______________________________ Partie Bonus ______________________________ */
 

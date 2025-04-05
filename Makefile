@@ -29,6 +29,7 @@ DEFAULT = ft_isalpha.c	\
 	ft_get_first_word.c	\
 	ft_split.c			\
 	ft_split_charset.c		\
+	ft_split_raw.c			\
 	ft_itoa.c			\
 	ft_count_digits.c	\
 	ft_strmapi.c		\
