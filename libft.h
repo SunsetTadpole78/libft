@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/06 17:45:01 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/06 17:49:27 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,8 @@ char			*ft_pathjoin(char const *s1, char const *s2);
 char			*ft_strreplace_part(char *src, int start, int replace_len,
 					char *to_add);
 char			*ft_getlast_newline(char *value);
-char			*ft_remove_extension(char *value);
+char			*ft_remove_extension(char *file_name);
+char			*ft_get_extension(char *file_name);
 
 t_array			ft_array(void);
 int				ft_array_push(t_array *array, void *value);

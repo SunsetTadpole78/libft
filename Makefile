@@ -67,6 +67,7 @@ TEMP = ft_iswhitespace.c	\
        ft_strreplace_part.c	\
        ft_getlast_newline.c	\
        ft_remove_extension.c	\
+       ft_get_extension.c	\
        ft_array.c		\
        ft_array_push.c		\
        ft_array_pop.c		\
