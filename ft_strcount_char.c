@@ -6,11 +6,11 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 14:57:59 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/09 14:59:08 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/09 15:13:30 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcount_char(char *str, char c)
+int	ft_strcount_char(const char *str, char c)
 {
 	int	i;
 	int	count;
