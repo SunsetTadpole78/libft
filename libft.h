@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/09 15:13:17 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/10 00:15:32 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,5 +153,7 @@ t_array			ft_array_merge(t_array array1, t_array array2);
 t_array			ft_scandir(char *path, t_sorting_order sorting_order,
 					int hidden_files, int dir_path);
 int				ft_isdir(char *path);
+int				ft_iscurrent_dirpath(char *path);
+char			*ft_cleanpath(char *value);
 
 #endif
