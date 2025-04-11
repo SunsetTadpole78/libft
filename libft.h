@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/10 00:15:32 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/11 13:57:17 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,6 +134,7 @@ int				ft_strcount_char(const char *str, char c);
 t_array			ft_array(void);
 int				ft_array_push(t_array *array, void *value);
 int				ft_array_unshift(t_array *array, void *value);
+int				ft_array_add(t_array *array, int index, void *value);
 void			*ft_array_pop(t_array *array);
 void			*ft_array_set_value(t_array *array, int key, void *value);
 int				ft_array_count_value(t_array *array, void *value);
