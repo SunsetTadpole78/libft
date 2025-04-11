@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:05:15 by lroussel          #+#    #+#             */
-/*   Updated: 2025/03/26 14:03:57 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/11 18:20:00 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	ft_array_unset(t_array *array, void (*del)(int, void *))
 	void	**metadata;
 	int		i;
 
+	if (!array)
+		return ;
 	metadata = *array - 1;
 	i = 0;
 	while (i < *((int *)metadata[0]))
