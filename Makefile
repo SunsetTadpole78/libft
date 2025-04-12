@@ -71,6 +71,7 @@ TEMP = ft_iswhitespace.c	\
        ft_strcount_char.c	\
        ft_iscurrent_dirpath.c	\
        ft_cleanpath.c		\
+       ft_nothing.c		\
        ft_array.c		\
        ft_array_push.c		\
        ft_array_pop.c		\

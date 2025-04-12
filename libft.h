@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/11 13:57:17 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/12 13:32:44 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ char			*ft_getlast_newline(char *value);
 char			*ft_remove_extension(char *file_name);
 char			*ft_get_extension(char *file_name);
 int				ft_strcount_char(const char *str, char c);
+void			ft_nothing(void *value);
 
 t_array			ft_array(void);
 int				ft_array_push(t_array *array, void *value);
