@@ -6,11 +6,11 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 13:32:11 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/12 13:32:26 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/12 13:34:54 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	nothing(void *value)
+void	ft_nothing(void *value)
 {
 	(void)value;
 }
