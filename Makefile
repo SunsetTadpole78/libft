@@ -62,6 +62,8 @@ TEMP = ft_iswhitespace.c	\
        ft_abs.c			\
        ft_bytes_count.c		\
        ft_strlen_utf8.c		\
+       ft_strlen_without_ansi.c		\
+       ft_strlen_utf8_without_ansi.c		\
        ft_isonlywhitespaces.c	\
        ft_pathjoin.c		\
        ft_strreplace_part.c	\

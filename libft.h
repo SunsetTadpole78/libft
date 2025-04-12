@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/12 13:32:44 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/12 19:26:04 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,8 @@ int				ft_min(int v1, int v2);
 int				ft_abs(int v);
 int				ft_bytes_count(char c);
 size_t			ft_strlen_utf8(const char *s);
+size_t			ft_strlen_without_ansi(const char *s);
+size_t			ft_strlen_utf8_without_ansi(const char *s);
 int				ft_isonlywhitespaces(const char *s);
 char			*ft_pathjoin(char const *s1, char const *s2);
 char			*ft_strreplace_part(char *src, int start, int replace_len,
