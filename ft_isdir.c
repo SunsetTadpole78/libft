@@ -6,20 +6,18 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 11:02:47 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/13 22:15:16 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/13 22:36:19 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "dirent.h"
+#include <sys/stat.h>
 
-int	ft_isdir(const char *path)
+int ft_isdir(const char *path)
 {
-	DIR				*dir;
+	struct stat	infos;
 
-	dir = opendir(path);
-	if (!dir)
+	if (stat(path, &infos) == -1)
 		return (0);
-	closedir(dir);
-	return (1);
+	return (infos.st_mode & S_IFMT) == S_IFDIR;
 }
