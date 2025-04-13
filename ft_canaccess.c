@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 22:40:17 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/13 23:26:35 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/14 00:08:07 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,20 @@ int	check_value(const char *path, int i)
 	return (1);
 }
 
+static int	access_result(char *path)
+{
+	int	res;
+
+	if (!ft_isfile(path) && !ft_isdir(path))
+	{
+		free(path);
+		return (-1);
+	}
+	res = ft_isdotpath(path) || access(path, X_OK) == 0;
+	free(path);
+	return (res);
+}
+
 int	ft_canaccess(const char *path)
 {
 	int	i;
@@ -53,7 +67,5 @@ int	ft_canaccess(const char *path)
 		}
 		i++;
 	}
-	if (!ft_isfile(path) && !ft_isdir(path))
-		return (-1);
-	return (ft_isdotpath(path) || access(path, X_OK) == 0);
+	return (access_result((char *)path));
 }
