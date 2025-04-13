@@ -92,7 +92,9 @@ TEMP = ft_iswhitespace.c	\
        ft_array_merge.c		\
        ft_scandir.c		\
        ft_isdir.c		\
-       ft_isfile.c
+       ft_isfile.c		\
+       ft_canaccess.c		\
+       ft_isdotpath.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)
