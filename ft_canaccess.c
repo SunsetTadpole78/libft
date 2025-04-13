@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 22:40:17 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/14 00:08:07 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/14 00:09:55 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,10 @@ int	ft_canaccess(const char *path)
 		{
 			res = check_value(path, i);
 			if (res != 1)
+			{
+				free((char *)path);
 				return (res);
+			}
 		}
 		i++;
 	}
