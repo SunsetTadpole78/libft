@@ -94,7 +94,12 @@ TEMP = ft_iswhitespace.c	\
        ft_isdir.c		\
        ft_isfile.c		\
        ft_canaccess.c		\
-       ft_isdotpath.c
+       ft_isdotpath.c		\
+       ft_vector2.c		\
+       ft_fvector2.c		\
+       ft_vector3.c		\
+       ft_fvector3.c		\
+       ft_rgb.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)
