@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/13 23:03:25 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:57:37 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,33 @@ typedef struct s_vector2
 	int	x;
 	int	y;
 }	t_vector2;
+
+typedef struct s_vector3
+{
+	int	x;
+	int	y;
+	int	z;
+}	t_vector3;
+
+typedef struct s_fvector2
+{
+	float	x;
+	float	y;
+}	t_fvector2;
+
+typedef struct s_fvector3
+{
+	float	x;
+	float	y;
+	float	z;
+}	t_fvector3;
+
+typedef struct s_rgb
+{
+	int	r;
+	int	g;
+	int	b;
+}	t_rgb;
 
 typedef void	**t_array;
 
