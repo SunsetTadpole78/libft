@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/23 12:09:30 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:16:53 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,10 +190,10 @@ int				ft_isdotpath(const char *path);
 int				ft_iscurrent_dirpath(char *path);
 char			*ft_cleanpath(char *value);
 
-t_vector2	ft_vector2(int x, int y);
-t_fvector2	ft_fvector2(float x, float y);
-t_vector3	ft_vector3(int x, int y, int z);
-t_fvector3	ft_fvector3(float x, float y, float z);
-t_rgb		ft_rgb(int r, int g, int b);
+t_vector2		ft_vector2(int x, int y);
+t_fvector2		ft_fvector2(float x, float y);
+t_vector3		ft_vector3(int x, int y, int z);
+t_fvector3		ft_fvector3(float x, float y, float z);
+t_rgb			ft_rgb(unsigned int r, unsigned int g, unsigned int b);
 
 #endif
