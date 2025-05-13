@@ -100,7 +100,8 @@ TEMP = ft_iswhitespace.c	\
        ft_vector3.c		\
        ft_fvector3.c		\
        ft_rgb.c			\
-       ft_error.c
+       ft_error.c		\
+       ft_free_str_array.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)
