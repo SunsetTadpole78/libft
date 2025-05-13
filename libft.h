@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/04/23 12:16:53 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/13 17:57:33 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,5 +195,6 @@ t_fvector2		ft_fvector2(float x, float y);
 t_vector3		ft_vector3(int x, int y, int z);
 t_fvector3		ft_fvector3(float x, float y, float z);
 t_rgb			ft_rgb(unsigned int r, unsigned int g, unsigned int b);
+int				ft_error(char *message, int code);
 
 #endif
