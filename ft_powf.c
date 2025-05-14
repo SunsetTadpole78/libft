@@ -6,13 +6,13 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 15:20:29 by lroussel          #+#    #+#             */
-/*   Updated: 2025/05/14 15:27:09 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/14 16:00:32 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 float	ft_powf(float x, float y)
 {
-	int	i;
+	int		i;
 	float	result;
 
 	if (y < 0.0f)

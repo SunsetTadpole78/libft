@@ -6,13 +6,13 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 15:15:18 by lroussel          #+#    #+#             */
-/*   Updated: 2025/05/14 15:27:01 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/14 16:00:24 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 double	ft_pow(double x, double y)
 {
-	int	i;
+	int		i;
 	double	result;
 
 	if (y < 0)
