@@ -102,12 +102,12 @@ TEMP = ft_iswhitespace.c	\
        ft_rgb.c			\
        ft_error.c		\
        ft_free_str_array.c	\
-       ft_isfloat.c		\
        ft_atof.c		\
        ft_pow.c			\
        ft_powf.c		\
        ft_atorgb.c		\
-       ft_isoutint.c
+       ft_isoutint.c		\
+       ft_isnumeric.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)

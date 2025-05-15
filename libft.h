@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/05/16 00:55:29 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/16 01:30:27 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -197,11 +197,11 @@ t_fvector3		ft_fvector3(float x, float y, float z);
 t_rgb			ft_rgb(unsigned int r, unsigned int g, unsigned int b);
 int				ft_error(char *message, char *prefix, int code);
 void			ft_free_str_array(char **array);
-int				ft_isfloat(char *s);
 float			ft_atof(char *nptr);
 double			ft_pow(double x, double y);
 float			ft_powf(float x, float y);
 t_rgb			ft_atorgb(char *s);
-int				ft_isoutint(char *v);
+int				ft_isoutint(char *value);
+int				ft_isnumeric(char *s);
 
 #endif
