@@ -106,7 +106,8 @@ TEMP = ft_iswhitespace.c	\
        ft_atof.c		\
        ft_pow.c			\
        ft_powf.c		\
-       ft_atorgb.c
+       ft_atorgb.c		\
+       ft_isoutint.c
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)

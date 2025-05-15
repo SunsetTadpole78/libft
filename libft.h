@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/05/15 10:27:57 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/16 00:55:29 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,5 +202,6 @@ float			ft_atof(char *nptr);
 double			ft_pow(double x, double y);
 float			ft_powf(float x, float y);
 t_rgb			ft_atorgb(char *s);
+int				ft_isoutint(char *v);
 
 #endif
