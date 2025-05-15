@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 00:45:13 by lroussel          #+#    #+#             */
-/*   Updated: 2025/05/16 01:01:38 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/16 01:05:24 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_isoutint(char *value)
 		offset++;
 	i += offset;
 	nb = 0;
-	while (value[i] && (i - offset) <= 11)
+	while (value[i] && value[i] >= '0' && value[i] <= '9' && (i - offset) <= 11)
 	{
 		nb = nb * 10 + (value[i] - '0');
 		i++;
