@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 16:47:20 by lroussel          #+#    #+#             */
-/*   Updated: 2025/05/15 09:31:20 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/15 10:32:38 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	parse_cvalue(char *s)
 	res = 0;
 	while (s[i + offset] == '0')
 		offset++;
-	i+= offset;
+	i += offset;
 	while (s[i] >= '0' && s[i] <= '9' && (i - offset) < 3)
 	{
 		res = res * 10 + (s[i] - '0');
