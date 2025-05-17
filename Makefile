@@ -118,6 +118,7 @@ FILES = ft_isalpha.c				\
 	ft_fdot_product.c				\
 	ft_fvector3_sum.c				\
 	ft_fvector3_diff.c				\
+	ft_fvector3_scale.c				\
 
 OFILES = $(FILES:%.c=$(OBJS)/%.o)
 
