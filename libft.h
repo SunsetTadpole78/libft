@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/05/16 01:30:27 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/17 15:16:24 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -203,5 +203,11 @@ float			ft_powf(float x, float y);
 t_rgb			ft_atorgb(char *s);
 int				ft_isoutint(char *value);
 int				ft_isnumeric(char *s);
+
+t_fvector3		ft_fnormalize(t_fvector3 v);
+t_fvector3		ft_fcross_product(t_fvector3 v1, t_fvector3 v2);
+float			ft_fdot_product(t_fvector3 v1, t_fvector3 v2);
+t_fvector3		ft_fvector3_sum(t_fvector3 v1, t_fvector3 v2);
+t_fvector3		ft_fvector3_diff(t_fvector3 v1, t_fvector3 v2);
 
 #endif

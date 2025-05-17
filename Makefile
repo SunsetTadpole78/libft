@@ -107,7 +107,12 @@ TEMP = ft_iswhitespace.c	\
        ft_powf.c		\
        ft_atorgb.c		\
        ft_isoutint.c		\
-       ft_isnumeric.c
+       ft_isnumeric.c		\
+       ft_fnormalize.c		\
+       ft_fcross_product.c	\
+       ft_fdot_product.c	\
+       ft_fvector3_sum.c	\
+       ft_fvector3_diff.c	\
 
 OBJS =  $(DEFAULT:%.c=%.o)
 OBJS_A = $(OBJS) $(BONUS:%.c=%.o)
