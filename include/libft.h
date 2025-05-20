@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/05/18 00:44:55 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/20 11:16:18 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -210,5 +210,6 @@ float			ft_fdot_product(t_fvector3 v1, t_fvector3 v2);
 t_fvector3		ft_fvector3_sum(t_fvector3 v1, t_fvector3 v2);
 t_fvector3		ft_fvector3_diff(t_fvector3 v1, t_fvector3 v2);
 t_fvector3		ft_fvector3_scale(t_fvector3 v, float s);
+float			ft_fvector3_lenght(t_fvector3 v);
 
 #endif
