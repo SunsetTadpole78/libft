@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/05/20 11:20:44 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/22 11:13:25 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,6 +134,13 @@ typedef struct s_rgb
 	int	g;
 	int	b;
 }	t_rgb;
+
+typedef struct s_frgb
+{
+	float	r;
+	float	g;
+	float	b;
+}	t_frgb;
 
 typedef void	**t_array;
 
