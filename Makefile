@@ -121,6 +121,7 @@ FILES = ft_isalpha.c				\
 	ft_fvector3_scale.c				\
 	ft_fvector3_length.c				\
 	ft_rgb_lerp.c					\
+	ft_fvector3_lerp.c				\
 
 OFILES = $(FILES:%.c=$(OBJS)/%.o)
 
