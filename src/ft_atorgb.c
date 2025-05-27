@@ -6,7 +6,7 @@
 /*   By: lroussel <lroussel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 16:47:20 by lroussel          #+#    #+#             */
-/*   Updated: 2025/05/15 10:32:38 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/05/27 21:02:17 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ t_rgb	ft_atorgb(char *s)
 	char	**splited;
 	t_rgb	rgb;
 
+	if (s[ft_strlen(s)] == ',')
+		return (invalid_rgb(NULL));
 	splited = ft_split(s, ',');
 	if (!splited[0] || !splited[1] || !splited[2] || splited[3])
 		return (invalid_rgb(splited));
