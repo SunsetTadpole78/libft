@@ -123,7 +123,8 @@ FILES = ft_isalpha.c				\
 	ft_rgb_lerp.c					\
 	ft_fvector3_lerp.c				\
 	ft_fhorizontal_magnitude.c			\
-	ft_isextension.c
+	ft_isextension.c				\
+	ft_nextid.c					\
 
 OFILES = $(FILES:%.c=$(OBJS)/%.o)
 

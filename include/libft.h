@@ -6,7 +6,7 @@
 /*   By: lroussel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:35:19 by lroussel          #+#    #+#             */
-/*   Updated: 2025/06/26 10:55:56 by lroussel         ###   ########.fr       */
+/*   Updated: 2025/06/26 15:05:33 by lroussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -223,5 +223,6 @@ t_fvector3		ft_fvector3_lerp(t_fvector3 v1, t_fvector3 v2, float t);
 float			ft_fhorizontal_magnitude(t_fvector3 v);
 
 int				ft_isextension(char *path, char *extension);
+int				ft_nextid(void);
 
 #endif
